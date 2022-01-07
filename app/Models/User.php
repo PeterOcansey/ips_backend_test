@@ -6,6 +6,8 @@ use App\Models\Comment;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Models\UserAchievement;
+use App\Models\UserBadge;
 
 class User extends Authenticatable
 {
@@ -63,5 +65,21 @@ class User extends Authenticatable
     public function watched()
     {
         return $this->belongsToMany(Lesson::class)->wherePivot('watched', true);
+    }
+
+    /**
+     * The achievements that a user has attained.
+     */
+    public function achievements()
+    {
+        return $this->hasMany(UserAchievement::class);
+    }
+
+    /**
+     * The badges that a user has attained.
+     */
+    public function badges()
+    {
+        return $this->hasMany(UserBadge::class);
     }
 }
