@@ -17,6 +17,12 @@ class UserBadgeActivity
         $this->userBadgeRepo = $userBadgeRepo;
     }
 
+    /**
+     * Add a new badge to a user
+     * @param String $name
+     * @param App\Models\User $user
+     * @return App\Models\UserBadge
+     */
     public function addBadge(String $name, User $user)
     {
         $data = [];
@@ -29,7 +35,9 @@ class UserBadgeActivity
     }
 
     /**
-     * Check 
+     * Check and reward the user with a badge
+     * @param App\Models\User $user
+     * @return void
      */
     public function rewardBadge(User $user)
     {

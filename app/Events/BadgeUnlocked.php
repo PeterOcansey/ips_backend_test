@@ -15,7 +15,7 @@ class BadgeUnlocked
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    public $achievement_name;
+    public $badge_name;
     public $user;
 
     /**
@@ -23,10 +23,10 @@ class BadgeUnlocked
      *
      * @return void
      */
-    public function __construct(String $achievement_name, User $user)
+    public function __construct(String $badge_name, User $user)
     {
         //
-        $this->achievement_name = $achievement_name;
+        $this->badge_name = $badge_name;
         $this->user = $user;
     }
 
