@@ -4,6 +4,7 @@ namespace App\IPS\Activities;
 
 use App\IPS\Repos\UserAchievementRepo;
 use Carbon\Carbon;
+use App\Models\User;
 
 class UserAchievementActivity
 {

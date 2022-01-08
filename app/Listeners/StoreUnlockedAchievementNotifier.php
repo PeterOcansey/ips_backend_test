@@ -33,6 +33,7 @@ class StoreUnlockedAchievementNotifier
     public function handle(AchievementUnlocked $event)
     {
         //
+        //dd($event->achievement_name);
         $this->userAchievementActivity->addAchievement($event->achievement_name, $event->user);
         
         //Check and reward the user a new badge

@@ -6,7 +6,7 @@ class AchievementUtil
 {
 	public static function getLessonsWatchedAchievement(int $lessonWatched)
 	{
-		if($lessonWatched == 0)
+		if($lessonWatched == 1)
             return self::listLessonsWatchedAchievemnts()[0];
         else if($lessonWatched == 5)
             return self::listLessonsWatchedAchievemnts()[1];
@@ -23,7 +23,7 @@ class AchievementUtil
 
 	public static function getCommentsWrittenAchievement(int $commentWritten)
 	{
-        if($commentWritten == 0)
+        if($commentWritten == 1)
             return self::listCommentsWrittenAchievements()[0];
         else if($commentWritten == 3)
             return self::listCommentsWrittenAchievements()[1];

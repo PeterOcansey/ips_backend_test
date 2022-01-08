@@ -9,6 +9,7 @@ use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
+use App\Models\User;
 
 class AchievementUnlocked
 {
@@ -21,7 +22,7 @@ class AchievementUnlocked
      *
      * @return void
      */
-    public function __construct($achievement_name, $user)
+    public function __construct(String $achievement_name, User $user)
     {
         //
         $this->achievement_name = $achievement_name;

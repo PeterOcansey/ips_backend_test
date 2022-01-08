@@ -6,9 +6,11 @@ use App\Events\CommentWritten;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 use App\IPS\Utils\AchievementUtil;
+use App\Events\AchievementUnlocked;
 
 class CommentWrittenNotifier
 {
+    public $achievementUtil;
     /**
      * Create the event listener.
      *
@@ -27,6 +29,7 @@ class CommentWrittenNotifier
      */
     public function handle(CommentWritten $event)
     {
+
         //
         $user = $event->comment->user;
         

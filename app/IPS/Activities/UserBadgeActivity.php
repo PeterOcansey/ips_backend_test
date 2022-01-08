@@ -5,6 +5,7 @@ namespace App\IPS\Activities;
 use App\IPS\Repos\UserBadgeRepo;
 use Carbon\Carbon;
 use App\IPS\Utils\BadgeUtil;
+use App\Models\User;
 
 class UserBadgeActivity
 {
