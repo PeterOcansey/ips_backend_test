@@ -30,6 +30,7 @@ class CommentWrittenNotifier
         //
         $user = $event->comment->user;
         
+        //Get the next achievement for the user based on the number of comments
         $userAchievement = AchievementUtil::getCommentsWrittenAchievement(count($user->comments));
         if($userAchievement != null)
         {

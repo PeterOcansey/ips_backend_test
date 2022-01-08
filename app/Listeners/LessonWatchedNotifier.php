@@ -31,6 +31,7 @@ class LessonWatchedNotifier
         //
         $user = $event->user;
 
+        //Get the next achievement for the user based on the number of lessons watched
         $userAchievement = AchievementUtil::getLessonsWatchedAchievement(count($user->watched));
         if($userAchievement != null)
         {
