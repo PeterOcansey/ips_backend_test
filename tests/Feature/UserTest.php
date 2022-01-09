@@ -24,21 +24,4 @@ class UserTest extends TestCase
 
         $this->assertModelExists($user);
     }
-
-    /**
-     * Test a user can be add lessons
-     * Assert our database has the right record
-     * 
-     * @return void
-     */
-    public function test_user_watch_lesson()
-    {
-        $user = User::factory()
-            ->has(Lesson::factory()->count(3), 'lessons')
-            ->create();
-
-        $this->assertDatabaseHas('lesson_user', [
-            'user_id' => $user->id,
-        ]);
-    }
 }
