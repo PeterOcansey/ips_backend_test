@@ -54,7 +54,8 @@ class UserAchievementActivity
         $user_next_badge = BadgeUtil::listBadges()[array_search($user_current_badge, BadgeUtil::listBadges()) + 1];
 
         //Get user next badge count
-        $user_next_badge_count = (count(BadgeUtil::listBadges()) - count($user->badges));
+        $current_badge_count = count($user->badges);
+        $user_next_badge_count = (count(BadgeUtil::listBadges()) - ($current_badge_count == 0 ? 1 : $current_badge_count));
 
         $data["unlocked_achievements"] = $user_achievements;
         $data["next_available_achievements"] = array_values($next_available_achievemnts);
