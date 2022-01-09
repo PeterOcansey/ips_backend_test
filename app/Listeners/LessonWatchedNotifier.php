@@ -6,7 +6,7 @@ use App\Events\LessonWatched;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 use App\Events\AchievementUnlocked;
-use App\Utils\AchievementUtil;
+use App\IPS\Utils\AchievementUtil;
 
 class LessonWatchedNotifier
 {
