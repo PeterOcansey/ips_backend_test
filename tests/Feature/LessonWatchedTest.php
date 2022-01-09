@@ -15,7 +15,7 @@ class LessonWatchedTest extends TestCase
 {
     /**
      * Test a comment can be created
-     * Test functionality of CommentWrittenNotifier listener when CommentWritten event is triggered
+     * Test functionality of LessonWatchedNotifer listener when LessonWatched event is triggered
      * Assert our database has the right record
      * 
      * @return void
