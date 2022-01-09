@@ -10,4 +10,11 @@ class UserBadgeRepo
     {
         return UserBadge::create($data);
     }
+
+    public function getUserBadge(String $badge_name, int $user_id)
+    {
+        return UserBadge::where('name', $badge_name)
+                    ->where('user_id', $user_id)
+                    ->first();
+    }
 }

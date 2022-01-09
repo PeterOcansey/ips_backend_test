@@ -36,6 +36,11 @@ class UserBadgeActivity
         return $this->userBadgeRepo->addBadge($data);
     }
 
+    public function userHasBadge(String $badge_name, User $user)
+    {
+        return $this->userBadgeRepo->getUserBadge($badge_name, $user->id) != null ? true : false; 
+    }
+
     /**
      * Check and reward the user with a badge
      * @param App\Models\User $user
@@ -47,7 +52,7 @@ class UserBadgeActivity
         
         //Get a user badge base on user achievements count
         $user_badge = BadgeUtil::getAchievementsBadge($achievement_count);
-        if($user_badge != null)
+        if($user_badge != null && !$this->userHasBadge($user_badge, $user))
         {
             //Notify Badge event listeners of the new reward
             event(new BadgeUnlocked($user_badge, $user));
