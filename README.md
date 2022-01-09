@@ -1,4 +1,4 @@
-# IPS - Backend Event-Driven Test
+# IPS : Backend Event-Driven Test
 
 ## Installation
 
