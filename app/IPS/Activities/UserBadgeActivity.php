@@ -41,6 +41,12 @@ class UserBadgeActivity
         return $this->userBadgeRepo->getUserBadge($badge_name, $user->id) != null ? true : false; 
     }
 
+    public function getUserCurrentBadge($user)
+    {
+        $current_badge = $this->userBadgeRepo->getUserCurrentBadge($user->id);
+        return $current_badge != null ? $current_badge->name : BadgeUtil::listBadges()[0];
+    }
+
     /**
      * Check and reward the user with a badge
      * @param App\Models\User $user

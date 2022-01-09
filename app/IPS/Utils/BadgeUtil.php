@@ -19,7 +19,7 @@ class BadgeUtil
 
 	}
 
-    private static function listBadges()
+    public static function listBadges()
     {
         return [
             "Beginner",

@@ -37,7 +37,7 @@ class AchievementUtil
             return null;
 	}
 
-    private static function listLessonsWatchedAchievemnts()
+    public static function listLessonsWatchedAchievemnts()
     {
         return [
             "First Lesson Watched",
@@ -48,7 +48,7 @@ class AchievementUtil
         ];
     }
 
-    private static function listCommentsWrittenAchievements()
+    public static function listCommentsWrittenAchievements()
     {
         return [
             "First Comment Written",

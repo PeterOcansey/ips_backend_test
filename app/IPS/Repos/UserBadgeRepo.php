@@ -17,4 +17,9 @@ class UserBadgeRepo
                     ->where('user_id', $user_id)
                     ->first();
     }
+
+    public function getUserCurrentBadge(int $user_id)
+    {
+        return UserBadge::select("name")->where('user_id', $user_id)->orderBy('created_at','DESC')->first();
+    }
 }
