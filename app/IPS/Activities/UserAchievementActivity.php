@@ -61,7 +61,7 @@ class UserAchievementActivity
         $data["next_available_achievements"] = array_values($next_available_achievemnts);
         $data["current_badge"] = $user_current_badge;
         $data["next_badge"] = $user_next_badge;
-        $data['remaing_to_unlock_next_badge'] = $user_next_badge_count;
+        $data['remaining_to_unlock_next_badge'] = $user_next_badge_count;
 
         return $data;
 

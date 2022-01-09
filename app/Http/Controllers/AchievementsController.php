@@ -23,7 +23,7 @@ class AchievementsController extends Controller
             'next_available_achievements' => $data['next_available_achievements'],
             'current_badge' => $data['current_badge'],
             'next_badge' => $data['next_badge'],
-            'remaing_to_unlock_next_badge' => $data['remaing_to_unlock_next_badge']
+            'remaining_to_unlock_next_badge' => $data['remaining_to_unlock_next_badge']
         ]);
     }
 }
