@@ -15,7 +15,7 @@ class UserAchievementTest extends TestCase
      *
      * @return void
      */
-    public function test_example()
+    public function test_user_achievement_api_call()
     {
         $user = User::factory()->create();
         
