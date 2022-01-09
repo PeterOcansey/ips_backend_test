@@ -6,6 +6,7 @@ use App\IPS\Repos\UserBadgeRepo;
 use Carbon\Carbon;
 use App\IPS\Utils\BadgeUtil;
 use App\Models\User;
+use App\Events\BadgeUnlocked;
 
 class UserBadgeActivity
 {

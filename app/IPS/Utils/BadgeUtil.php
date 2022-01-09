@@ -6,7 +6,7 @@ class BadgeUtil
 {
 	public static function getAchievementsBadge(int $userAchievements)
 	{
-		if($userAchievements == 0)
+		if($userAchievements < 4)
             return self::listBadges()[0];
         else if($userAchievements == 4)
             return self::listBadges()[1];
